@@ -20,7 +20,12 @@ import {
   Smartphone,
   Star,
   TrendingUp,
-  Activity
+  Activity,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Youtube
 } from "lucide-react";
 import heroImage from "@/assets/hero-health-ai.jpg";
 
@@ -43,9 +48,11 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <Heart className="w-5 h-5 text-white" />
-              </div>
+              <img 
+                src="/lovable-uploads/85d96c69-e8d1-4e3f-8ae9-bc744d66a744.png" 
+                alt="Vitalynx Logo" 
+                className="w-8 h-8"
+              />
               <span className="text-xl font-bold">Vitalynx</span>
             </div>
             <div className="hidden md:flex items-center gap-8">
@@ -589,11 +596,23 @@ const Index = () => {
             
             <div className="space-y-4">
               <h4 className="font-semibold">Connect</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Twitter</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              </ul>
+              <div className="flex gap-4">
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors group">
+                  <Linkedin className="w-5 h-5 text-gray-300 group-hover:text-white" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors group">
+                  <Twitter className="w-5 h-5 text-gray-300 group-hover:text-white" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors group">
+                  <Facebook className="w-5 h-5 text-gray-300 group-hover:text-white" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors group">
+                  <Instagram className="w-5 h-5 text-gray-300 group-hover:text-white" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors group">
+                  <Youtube className="w-5 h-5 text-gray-300 group-hover:text-white" />
+                </a>
+              </div>
             </div>
           </div>
           
