@@ -285,13 +285,13 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               {
-                name: "Vansh Patel",
+                name: "Vansh Verma",
                 role: "Co-Founder & CEO",
                 description: "Healthcare technology visionary with a passion for making medical data accessible."
               },
               {
-                name: "Co-Founder",
-                role: "CTO",
+                name: "Abaan Azhar",
+                role: "Co-Founder & CTO",
                 description: "AI and machine learning expert focused on healthcare applications."
               },
               {
