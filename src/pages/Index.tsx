@@ -92,8 +92,8 @@ const Index = () => {
                   , Instantly
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-                  Upload your lab reports and get AI-powered, personalized explanations you can trust. 
-                  No more confusion—just clear, actionable health insights.
+                  Upload lab reports and get AI-powered explanations you can trust. 
+                  Clear, actionable health insights—no medical degree required.
                 </p>
               </div>
               
@@ -124,9 +124,15 @@ const Index = () => {
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl hover:shadow-glow transition-all duration-500 hover:scale-[1.02]">
                 <img 
                   src={heroImage} 
-                  alt="AI-powered health insights" 
+                  alt="Vitalynx mobile app interface showing personalized health insights and lab report analysis on smartphone" 
                   className="w-full h-auto"
                 />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6 text-white">
+                  <h3 className="text-lg font-semibold mb-2">Smart Health Analysis</h3>
+                  <p className="text-sm opacity-90">
+                    Instantly transform complex lab results into clear, personalized health insights with our AI-powered mobile interface.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -157,9 +163,9 @@ const Index = () => {
       </section>
 
       {/* How It Works */}
-      <section id="features" className="py-24 md:py-32">
+      <section id="features" className="py-20 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-20">
+          <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-4">
               Simple Process
             </Badge>
@@ -167,7 +173,7 @@ const Index = () => {
               How It Works
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Get personalized health insights in four simple steps
+              Get health insights in four simple steps
             </p>
           </div>
           
@@ -175,26 +181,26 @@ const Index = () => {
             {[
               {
                 icon: Upload,
-                title: "Upload Your Report",
-                description: "Upload your lab report as PDF, image, or enter results manually",
+                title: "Upload Report",
+                description: "Upload lab reports as PDF/image or enter results manually",
                 delay: "0ms"
               },
               {
                 icon: MessageSquare,
                 title: "Add Context",
-                description: "Tell us about any symptoms or concerns you have",
+                description: "Share symptoms or health concerns for better insights",
                 delay: "100ms"
               },
               {
                 icon: Brain,
                 title: "AI Analysis",
-                description: "Our AI analyzes your results and provides instant insights",
+                description: "Our AI analyzes your data and provides instant insights",
                 delay: "200ms"
               },
               {
                 icon: FileText,
-                title: "Get Your Summary",
-                description: "Receive a personalized health summary with actionable recommendations",
+                title: "Get Summary",
+                description: "Receive personalized health summary with recommendations",
                 delay: "300ms"
               }
             ].map((step, index) => (
@@ -229,7 +235,7 @@ const Index = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-24 md:py-32 bg-muted/20">
+      <section className="py-20 md:py-24 bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -245,22 +251,22 @@ const Index = () => {
               {
                 icon: Brain,
                 title: "AI-Powered Insights",
-                description: "Advanced AI interprets your lab results with medical accuracy"
+                description: "Advanced AI interprets lab results with medical accuracy"
               },
               {
                 icon: Smartphone,
                 title: "Multiple Input Methods",
-                description: "Upload PDFs, images, or manually enter your test results"
+                description: "Upload PDFs, images, or manually enter test results"
               },
               {
                 icon: MessageSquare,
                 title: "Symptom Integration",
-                description: "Add your symptoms for more personalized interpretations"
+                description: "Add symptoms for more personalized interpretations"
               },
               {
                 icon: FileText,
                 title: "Detailed Summaries",
-                description: "Get comprehensive health reports in plain language"
+                description: "Comprehensive health reports in plain language"
               },
               {
                 icon: Shield,
@@ -270,7 +276,7 @@ const Index = () => {
               {
                 icon: Zap,
                 title: "Instant Results",
-                description: "Get your health insights in seconds, not days"
+                description: "Get health insights in seconds, not days"
               }
             ].map((feature, index) => (
               <Card key={index} className="border-0 shadow-soft hover:shadow-glow transition-all duration-300 bg-card/80 backdrop-blur-sm hover:-translate-y-1">
@@ -291,22 +297,21 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Vitalynx */}
-      <section id="about" className="py-24 md:py-32">
+      {/* About & Team Combined */}
+      <section id="about" className="py-20 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 About Vitalynx
               </h2>
               <p className="text-lg text-muted-foreground">
-                We're on a mission to democratize health understanding. Too many people receive lab 
-                results they can't interpret, leaving them confused and anxious about their health.
+                We're democratizing health understanding. Too many people receive lab 
+                results they can't interpret, leaving them confused about their health.
               </p>
               <p className="text-lg text-muted-foreground">
-                Vitalynx bridges this gap by providing instant, AI-powered explanations that make 
-                complex medical data accessible to everyone. Our goal is to empower you to take 
-                control of your health journey with confidence and clarity.
+                Vitalynx bridges this gap with AI-powered explanations that make 
+                complex medical data accessible to everyone.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Badge variant="secondary" className="px-4 py-2">
@@ -320,10 +325,6 @@ const Index = () => {
                 <Badge variant="secondary" className="px-4 py-2">
                   <Brain className="w-4 h-4 mr-2" />
                   Innovation
-                </Badge>
-                <Badge variant="secondary" className="px-4 py-2">
-                  <Lock className="w-4 h-4 mr-2" />
-                  Privacy
                 </Badge>
               </div>
             </div>
@@ -345,44 +346,37 @@ const Index = () => {
               </Card>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Team Section */}
-      <section className="py-24 md:py-32 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-20">
+          {/* Team Section */}
+          <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-4">
               Our Team
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Meet Our Team
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Meet Our Founders
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Passionate healthcare innovators dedicated to your wellbeing
-            </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {[
               {
                 name: "Vansh Verma",
                 role: "Co-Founder & CEO",
-                description: "Healthcare technology visionary with a passion for making medical data accessible to everyone."
+                description: "Healthcare technology visionary passionate about making medical data accessible."
               },
               {
                 name: "Abaan Azhar",
                 role: "Co-Founder & CTO",
-                description: "AI and machine learning expert focused on building reliable healthcare applications."
+                description: "AI expert focused on building reliable healthcare applications."
               }
             ].map((member, index) => (
               <Card key={index} className="text-center border-0 shadow-soft hover:shadow-glow transition-all duration-300 hover:-translate-y-1 group">
                 <CardHeader className="pb-6">
-                  <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-12 h-12 text-white" />
+                  <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Users className="w-10 h-10 text-white" />
                   </div>
-                  <CardTitle className="text-2xl mb-2">{member.name}</CardTitle>
-                  <CardDescription className="text-primary font-semibold text-lg">
+                  <CardTitle className="text-xl mb-2">{member.name}</CardTitle>
+                  <CardDescription className="text-primary font-semibold">
                     {member.role}
                   </CardDescription>
                 </CardHeader>
@@ -398,14 +392,14 @@ const Index = () => {
       </section>
 
       {/* Privacy & Security */}
-      <section className="py-24 md:py-32">
+      <section className="py-20 md:py-24 bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Privacy & Security
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Your health data is precious. We protect it with enterprise-grade security.
+              Your health data is protected with enterprise-grade security.
             </p>
           </div>
           
@@ -414,17 +408,17 @@ const Index = () => {
               {
                 icon: Shield,
                 title: "End-to-End Encryption",
-                description: "All your data is encrypted both in transit and at rest"
+                description: "All data encrypted in transit and at rest"
               },
               {
                 icon: Lock,
                 title: "No Data Sharing",
-                description: "We never sell, share, or monetize your personal health information"
+                description: "We never sell or share your health information"
               },
               {
                 icon: CheckCircle,
                 title: "HIPAA Compliant",
-                description: "Built to meet the highest healthcare privacy standards"
+                description: "Built to meet healthcare privacy standards"
               }
             ].map((item, index) => (
               <Card key={index} className="text-center border-0 shadow-soft">
@@ -446,11 +440,11 @@ const Index = () => {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-24 md:py-32 bg-muted/30">
+      <section id="faq" className="py-20 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Frequently Asked Questions
+              FAQ
             </h2>
           </div>
           
@@ -459,27 +453,23 @@ const Index = () => {
               {[
                 {
                   question: "How does Vitalynx work?",
-                  answer: "Simply upload your lab report or enter your test results manually. Add any symptoms or concerns you have, and our AI will analyze your data to provide personalized, easy-to-understand health insights in seconds."
+                  answer: "Upload your lab report, add symptoms/concerns, and get AI-powered health insights in seconds."
                 },
                 {
-                  question: "Is my health data safe and private?",
-                  answer: "Absolutely. We use enterprise-grade encryption to protect your data both in transit and at rest. We never sell, share, or monetize your personal health information, and we're built to meet HIPAA compliance standards."
+                  question: "Is my data safe?",
+                  answer: "Yes. Enterprise-grade encryption, HIPAA compliant, and we never sell your health data."
                 },
                 {
-                  question: "What types of lab reports can I upload?",
-                  answer: "You can upload most common lab reports as PDFs or images, including blood work, metabolic panels, lipid profiles, and more. You can also manually enter your test results if you prefer."
+                  question: "What reports can I upload?",
+                  answer: "Most lab reports as PDFs/images: blood work, metabolic panels, lipid profiles, and more."
                 },
                 {
-                  question: "Is this a replacement for consulting with my doctor?",
-                  answer: "No, Vitalynx is designed to help you understand your lab results, not replace professional medical advice. Always consult with your healthcare provider for medical decisions and treatment plans."
+                  question: "Does this replace my doctor?",
+                  answer: "No. Vitalynx helps you understand results but always consult your healthcare provider for medical decisions."
                 },
                 {
-                  question: "How accurate are the AI interpretations?",
-                  answer: "Our AI is trained on extensive medical literature and lab result databases to provide accurate interpretations. However, our insights are educational and should complement, not replace, professional medical consultation."
-                },
-                {
-                  question: "When will Vitalynx be available?",
-                  answer: "We're currently in development and will be launching soon! Sign up for early access to be among the first to try Vitalynx when we launch."
+                  question: "When will it be available?",
+                  answer: "Soon! Sign up for early access to be first to try Vitalynx."
                 }
               ].map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg px-6 bg-card shadow-soft">
@@ -497,7 +487,7 @@ const Index = () => {
       </section>
 
       {/* Early Access Signup */}
-      <section className="py-24 md:py-32 bg-gradient-section relative overflow-hidden">
+      <section className="py-20 md:py-24 bg-gradient-section relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -509,8 +499,7 @@ const Index = () => {
               Get Early Access
             </h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Be the first to experience AI-powered health insights. Join our waitlist and we'll 
-              notify you when Vitalynx launches.
+              Be first to experience AI-powered health insights. Join our waitlist for launch notification.
             </p>
             
             {!isSubmitted ? (
@@ -529,7 +518,7 @@ const Index = () => {
                   </Button>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  No spam. We'll only notify you when we launch!
+                  No spam. Launch notifications only!
                 </p>
               </form>
             ) : (
@@ -538,7 +527,7 @@ const Index = () => {
                   <CheckCircle className="w-16 h-16 text-primary mx-auto mb-6" />
                   <h3 className="text-2xl font-semibold mb-4">You're on the list!</h3>
                   <p className="text-muted-foreground text-lg">
-                    We'll notify you as soon as Vitalynx is ready.
+                    We'll notify you when Vitalynx is ready.
                   </p>
                 </CardContent>
               </Card>
@@ -548,14 +537,14 @@ const Index = () => {
       </section>
 
       {/* Contact */}
-      <section className="py-24 md:py-32">
+      <section className="py-20 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Questions? We're Here to Help
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Have questions about Vitalynx or want to learn more? We'd love to hear from you.
+              Have questions about Vitalynx? We'd love to hear from you.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
