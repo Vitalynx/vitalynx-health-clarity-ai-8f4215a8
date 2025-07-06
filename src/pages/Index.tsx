@@ -44,22 +44,30 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/40">
-        <div className="container mx-auto px-4 py-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border/60">
+        <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <img 
-                src="/lovable-uploads/85d96c69-e8d1-4e3f-8ae9-bc744d66a744.png" 
-                alt="Vitalynx Logo" 
-                className="w-8 h-8"
-              />
-              <span className="text-xl font-bold">Vitalynx</span>
+            <div className="flex items-center gap-3 group">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/85d96c69-e8d1-4e3f-8ae9-bc744d66a744.png" 
+                  alt="Vitalynx Logo" 
+                  className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 rounded-lg blur-lg transition-opacity duration-300 group-hover:opacity-20"></div>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent leading-tight">Vitalynx</span>
+                <span className="text-xs text-muted-foreground tracking-wider uppercase font-medium -mt-1">Health AI</span>
+              </div>
             </div>
             <div className="hidden md:flex items-center gap-8">
-              <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
-              <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a>
-              <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
-              <Button variant="outline" size="sm">Get Early Access</Button>
+              <a href="#features" className="text-muted-foreground hover:text-primary transition-colors font-medium">Features</a>
+              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors font-medium">About</a>
+              <a href="#faq" className="text-muted-foreground hover:text-primary transition-colors font-medium">FAQ</a>
+              <Button variant="outline" size="sm" className="border-primary/20 hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                Get Early Access
+              </Button>
             </div>
           </div>
         </div>
@@ -67,14 +75,14 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-section pt-20">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-3"></div>
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-6">
-                <Badge variant="secondary" className="w-fit animate-pulse">
-                  <Activity className="w-4 h-4 mr-2" />
-                  AI-Powered Health Insights
+                <Badge variant="secondary" className="w-fit animate-pulse border-primary/20 bg-primary/5">
+                  <Activity className="w-4 h-4 mr-2 text-primary" />
+                  <span className="text-primary">AI-Powered Health Insights</span>
                 </Badge>
                 <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
                   Decode Your{" "}
@@ -90,11 +98,11 @@ const Index = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="lg" className="text-lg px-12 py-8 hover:scale-105 transition-all duration-300">
+                <Button size="lg" className="text-lg px-12 py-8 bg-gradient-primary hover:shadow-glow hover:scale-105 transition-all duration-300 border-0">
                   Get Early Access
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg px-12 py-8 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                <Button variant="outline" size="lg" className="text-lg px-12 py-8 border-primary/30 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
                   Learn More
                 </Button>
               </div>
@@ -112,8 +120,8 @@ const Index = () => {
             </div>
             
             <div className="relative animate-scale-in">
-              <div className="absolute inset-0 bg-gradient-primary opacity-20 blur-3xl rounded-full animate-pulse"></div>
-              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl hover:shadow-glow transition-all duration-500 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-primary opacity-15 blur-3xl rounded-full animate-pulse"></div>
+              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl hover:shadow-glow transition-all duration-500 hover:scale-[1.02]">
                 <img 
                   src={heroImage} 
                   alt="AI-powered health insights" 
@@ -126,7 +134,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-card">
+      <section className="py-16 bg-card/50 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
@@ -136,12 +144,12 @@ const Index = () => {
             ].map((stat, index) => (
               <div key={index} className="group">
                 <div className="flex items-center justify-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-soft">
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
                 <div className="text-4xl font-bold text-foreground mb-2">{stat.number}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
+                <div className="text-muted-foreground font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -221,7 +229,7 @@ const Index = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-24 md:py-32 bg-muted/30">
+      <section className="py-24 md:py-32 bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -265,9 +273,9 @@ const Index = () => {
                 description: "Get your health insights in seconds, not days"
               }
             ].map((feature, index) => (
-              <Card key={index} className="border-0 shadow-soft hover:shadow-glow transition-all duration-300">
+              <Card key={index} className="border-0 shadow-soft hover:shadow-glow transition-all duration-300 bg-card/80 backdrop-blur-sm hover:-translate-y-1">
                 <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 shadow-soft">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <CardTitle className="text-lg">{feature.title}</CardTitle>
@@ -568,7 +576,17 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <h3 className="text-xl font-bold">Vitalynx</h3>
+              <div className="flex items-center gap-3">
+                <img 
+                  src="/lovable-uploads/85d96c69-e8d1-4e3f-8ae9-bc744d66a744.png" 
+                  alt="Vitalynx Logo" 
+                  className="w-8 h-8 brightness-0 invert"
+                />
+                <div className="flex flex-col">
+                  <span className="text-xl font-bold">Vitalynx</span>
+                  <span className="text-xs text-gray-400 tracking-wider uppercase font-medium -mt-1">Health AI</span>
+                </div>
+              </div>
               <p className="text-gray-300">
                 Clarity for your health—AI-powered insights from your lab reports.
               </p>
