@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -72,9 +73,9 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center pt-16 bg-grid-pattern">
+      <section className="relative min-h-[85vh] flex items-center justify-center pt-16 bg-enhanced-dots">
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background"></div>
-        <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 py-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
@@ -119,12 +120,28 @@ const Index = () => {
                   alt="Vitalynx mobile app interface" 
                   className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <h3 className="text-lg font-light mb-2">Smart Health Analysis</h3>
-                  <p className="text-sm opacity-90 font-light leading-relaxed">
-                    Transform complex lab results into clear, personalized health insights instantly.
-                  </p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6 text-white space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-light mb-2">Smart Health Analysis Dashboard</h3>
+                    <p className="text-sm opacity-90 font-light leading-relaxed">
+                      Transform complex lab results into clear, personalized health insights instantly. Get comprehensive analysis of your biomarkers, trends, and actionable recommendations.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-4 text-xs opacity-80">
+                    <div className="flex items-center gap-1">
+                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                      <span>Real-time Analysis</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                      <span>HIPAA Compliant</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                      <span>AI-Powered</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/10 rounded-full blur-2xl"></div>
@@ -135,7 +152,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 border-y border-primary/10 relative bg-grid-pattern">
+      <section className="py-12 border-y border-primary/10 relative bg-enhanced-dots">
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 to-background"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-3 gap-12 text-center">
@@ -159,10 +176,10 @@ const Index = () => {
       </section>
 
       {/* How It Works */}
-      <section id="how" className="py-20 relative bg-grid-pattern">
+      <section id="how" className="py-16 relative bg-enhanced-dots">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <div className="inline-block px-4 py-2 rounded-full bg-primary/5 text-sm text-primary font-light mb-6 border border-primary/10">
               Simple Process
             </div>
@@ -220,11 +237,11 @@ const Index = () => {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-24 relative">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+      <section id="faq" className="py-20 relative">
+        <div className="absolute inset-0 bg-enhanced-dots opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 to-background"></div>
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
               FAQ
             </h2>
@@ -263,8 +280,8 @@ const Index = () => {
       </section>
 
       {/* Early Access */}
-      <section className="py-24 relative">
-        <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-enhanced-dots opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 backdrop-blur-sm">
@@ -312,10 +329,10 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 border-t border-primary/10 relative">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      <footer className="py-12 border-t border-primary/10 relative">
+        <div className="absolute inset-0 bg-enhanced-dots opacity-5"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
+          <div className="grid md:grid-cols-4 gap-12 mb-8">
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <img 
@@ -366,7 +383,7 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="pt-8 border-t border-primary/10 text-center">
+          <div className="pt-6 border-t border-primary/10 text-center">
             <p className="text-muted-foreground font-light text-sm">&copy; 2024 Vitalynx. All rights reserved.</p>
           </div>
         </div>
