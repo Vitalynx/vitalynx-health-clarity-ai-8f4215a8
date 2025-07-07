@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -73,12 +72,12 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-16 bg-grid-pattern">
+      <section className="relative min-h-[85vh] flex items-center justify-center pt-16 bg-grid-pattern">
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background"></div>
-        <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-10">
-              <div className="space-y-8">
+        <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-6">
                 <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
                   <Activity className="w-4 h-4 text-primary" />
                   <span className="text-sm text-primary font-light">AI-Powered Health Insights</span>
@@ -91,7 +90,7 @@ const Index = () => {
                   <br />Instantly
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-lg leading-relaxed font-light">
-                  Upload lab reports and receive AI-powered explanations. Clear, actionable health insights—no medical degree required.
+                  Upload lab reports and receive AI-powered explanations. Clear, actionable health insights from your medical data.
                 </p>
               </div>
               
@@ -109,10 +108,6 @@ const Index = () => {
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                   <span className="font-light">100% Private & Secure</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
-                  <span className="font-light">No Medical Degree Required</span>
                 </div>
               </div>
             </div>
@@ -140,8 +135,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 border-y border-primary/10 relative">
-        <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
+      <section className="py-16 border-y border-primary/10 relative bg-grid-pattern">
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 to-background"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-3 gap-12 text-center">
@@ -151,12 +145,12 @@ const Index = () => {
               { number: "<5s", label: "Analysis Time", icon: Zap, color: "text-accent" }
             ].map((stat, index) => (
               <div key={index} className="group">
-                <div className="flex items-center justify-center mb-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border border-primary/20">
-                    <stat.icon className={`w-6 h-6 ${stat.color}`} />
+                <div className="flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border border-primary/20">
+                    <stat.icon className={`w-5 h-5 ${stat.color}`} />
                   </div>
                 </div>
-                <div className="text-4xl font-light text-foreground mb-3">{stat.number}</div>
+                <div className="text-3xl font-light text-foreground mb-2">{stat.number}</div>
                 <div className="text-muted-foreground font-light uppercase text-sm tracking-wider">{stat.label}</div>
               </div>
             ))}
@@ -165,15 +159,14 @@ const Index = () => {
       </section>
 
       {/* How It Works */}
-      <section id="how" className="py-24 relative">
-        <div className="absolute inset-0 bg-grid-pattern opacity-15"></div>
+      <section id="how" className="py-20 relative bg-grid-pattern">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 rounded-full bg-primary/5 text-sm text-primary font-light mb-8 border border-primary/10">
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 rounded-full bg-primary/5 text-sm text-primary font-light mb-6 border border-primary/10">
               Simple Process
             </div>
-            <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl font-light text-foreground mb-4">
               How It Works
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
@@ -181,45 +174,42 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Upload,
                 title: "Upload Report", 
                 description: "Upload lab reports as PDF/image or enter results manually",
-                color: "from-primary/10 to-primary/20",
+                gradient: "from-primary/20 to-primary/30",
                 iconColor: "text-primary"
               },
               {
                 icon: MessageSquare,
                 title: "Add Context",
                 description: "Share symptoms or health concerns for better insights",
-                color: "from-secondary/10 to-secondary/20", 
+                gradient: "from-secondary/20 to-secondary/30", 
                 iconColor: "text-secondary"
               },
               {
                 icon: Brain,
                 title: "AI Analysis",
                 description: "Our AI analyzes your data and provides instant insights",
-                color: "from-accent/10 to-accent/20",
+                gradient: "from-accent/20 to-accent/30",
                 iconColor: "text-accent"
               },
               {
                 icon: FileText,
                 title: "Get Summary",
                 description: "Receive personalized health summary with recommendations",
-                color: "from-primary/10 to-primary/20",
+                gradient: "from-primary/20 to-primary/30",
                 iconColor: "text-primary"
               }
             ].map((step, index) => (
               <div key={index} className="group text-center relative">
-                <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${step.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border border-primary/10`}>
-                  <step.icon className={`w-7 h-7 ${step.iconColor}`} />
+                <div className={`mx-auto w-14 h-14 bg-gradient-to-br ${step.gradient} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border border-primary/10`}>
+                  <step.icon className={`w-6 h-6 ${step.iconColor}`} />
                 </div>
-                <div className="absolute top-4 right-4 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center text-primary font-light text-xs border border-primary/20">
-                  {index + 1}
-                </div>
-                <h3 className="text-lg font-light mb-4 text-foreground">{step.title}</h3>
+                <h3 className="text-lg font-light mb-3 text-foreground">{step.title}</h3>
                 <p className="text-muted-foreground font-light leading-relaxed text-sm">
                   {step.description}
                 </p>
