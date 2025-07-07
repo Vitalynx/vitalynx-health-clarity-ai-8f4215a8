@@ -72,8 +72,8 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center pt-16 bg-dots-visible">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background"></div>
+      <section className="relative min-h-[85vh] flex items-center justify-center pt-16 bg-dots-hero">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background/70"></div>
         <div className="max-w-7xl mx-auto px-6 py-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -151,8 +151,8 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 border-y border-primary/10 relative bg-dots-subtle">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/90"></div>
+      <section className="py-12 border-y border-primary/10 relative bg-dots-subtle-animated">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background/70"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-3 gap-12 text-center">
             {[
@@ -175,8 +175,8 @@ const Index = () => {
       </section>
 
       {/* How It Works */}
-      <section id="how" className="py-16 relative bg-enhanced-dots">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background/90"></div>
+      <section id="how" className="py-16 relative bg-dots-dynamic">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/70"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
             <div className="inline-block px-4 py-2 rounded-full bg-primary/5 text-sm text-primary font-light mb-6 border border-primary/10">
@@ -236,8 +236,8 @@ const Index = () => {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-20 relative bg-dots-subtle">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 to-background/85"></div>
+      <section id="faq" className="py-20 relative bg-dots-subtle-animated">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background/65"></div>
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
@@ -278,8 +278,8 @@ const Index = () => {
       </section>
 
       {/* Early Access */}
-      <section className="py-20 relative bg-dots-visible">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/75 to-background/85"></div>
+      <section className="py-20 relative bg-dots-dynamic">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/55 to-background/70"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 backdrop-blur-sm">
             <Star className="w-4 h-4 text-primary" />
@@ -326,8 +326,8 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-primary/10 relative bg-dots-subtle">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background"></div>
+      <footer className="py-12 border-t border-primary/10 relative bg-dots-subtle-animated">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background/80"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-4 gap-12 mb-8">
             <div className="space-y-6">

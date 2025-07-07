@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -112,33 +113,171 @@ All colors MUST be HSL.
     background-size: 20px 20px;
   }
 
-  /* Enhanced dot pattern background with increased visibility */
-  .bg-enhanced-dots {
-    background-image: 
-      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.25) 2px, transparent 2px),
-      radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.2) 1px, transparent 1px),
-      radial-gradient(circle at 50% 50%, hsl(var(--accent) / 0.15) 1.5px, transparent 1.5px);
-    background-size: 40px 40px, 30px 30px, 25px 25px;
-    background-position: 0 0, 15px 15px, 20px 20px;
+  /* Dynamic animated dot patterns */
+  .bg-dots-dynamic {
+    position: relative;
+    overflow: hidden;
   }
 
-  /* More visible dot pattern for sections that need stronger visibility */
-  .bg-dots-visible {
+  .bg-dots-dynamic::before,
+  .bg-dots-dynamic::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  .bg-dots-dynamic::before {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.4) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.35) 1.5px, transparent 1.5px),
+      radial-gradient(circle at 50% 50%, hsl(var(--accent) / 0.3) 1px, transparent 1px);
+    background-size: 60px 60px, 45px 45px, 35px 35px;
+    background-position: 0 0, 15px 15px, 30px 30px;
+    animation: float-dots 20s ease-in-out infinite;
+  }
+
+  .bg-dots-dynamic::after {
+    background-image: 
+      radial-gradient(circle at 60% 40%, hsl(var(--primary) / 0.25) 1.5px, transparent 1.5px),
+      radial-gradient(circle at 30% 70%, hsl(var(--accent) / 0.2) 1px, transparent 1px);
+    background-size: 80px 80px, 25px 25px;
+    background-position: 20px 20px, 10px 40px;
+    animation: float-dots-reverse 25s ease-in-out infinite;
+  }
+
+  /* Hero section dynamic dots */
+  .bg-dots-hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-dots-hero::before,
+  .bg-dots-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  .bg-dots-hero::before {
+    background-image: 
+      radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.5) 3px, transparent 3px),
+      radial-gradient(circle at 80% 60%, hsl(var(--secondary) / 0.4) 2px, transparent 2px),
+      radial-gradient(circle at 45% 80%, hsl(var(--accent) / 0.35) 2.5px, transparent 2.5px);
+    background-size: 70px 70px, 50px 50px, 40px 40px;
+    background-position: 0 0, 25px 25px, 35px 35px;
+    animation: pulse-dots 15s ease-in-out infinite;
+  }
+
+  .bg-dots-hero::after {
+    background-image: 
+      radial-gradient(circle at 70% 25%, hsl(var(--primary) / 0.3) 1.5px, transparent 1.5px),
+      radial-gradient(circle at 25% 75%, hsl(var(--accent) / 0.25) 1px, transparent 1px);
+    background-size: 90px 90px, 30px 30px;
+    background-position: 40px 10px, 15px 50px;
+    animation: drift-dots 18s ease-in-out infinite;
+  }
+
+  /* Subtle animated dots */
+  .bg-dots-subtle-animated {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-dots-subtle-animated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
     background-image: 
       radial-gradient(circle at 30% 40%, hsl(var(--primary) / 0.3) 1.5px, transparent 1.5px),
-      radial-gradient(circle at 70% 60%, hsl(var(--secondary) / 0.25) 1px, transparent 1px),
-      radial-gradient(circle at 20% 80%, hsl(var(--accent) / 0.2) 2px, transparent 2px);
-    background-size: 35px 35px, 25px 25px, 45px 45px;
-    background-position: 0 0, 12px 12px, 25px 25px;
+      radial-gradient(circle at 70% 70%, hsl(var(--muted-foreground) / 0.25) 1px, transparent 1px);
+    background-size: 40px 40px, 25px 25px;
+    background-position: 0 0, 12px 12px;
+    animation: gentle-float 22s ease-in-out infinite;
   }
 
-  /* Subtle but visible dots for professional sections */
-  .bg-dots-subtle {
-    background-image: 
-      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.2) 1px, transparent 1px),
-      radial-gradient(circle at 75% 75%, hsl(var(--muted-foreground) / 0.15) 0.8px, transparent 0.8px);
-    background-size: 30px 30px, 20px 20px;
-    background-position: 0 0, 10px 10px;
+  /* Animation keyframes */
+  @keyframes float-dots {
+    0%, 100% {
+      transform: translateX(0) translateY(0);
+      opacity: 1;
+    }
+    25% {
+      transform: translateX(10px) translateY(-5px);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translateX(-5px) translateY(10px);
+      opacity: 1;
+    }
+    75% {
+      transform: translateX(15px) translateY(5px);
+      opacity: 0.9;
+    }
+  }
+
+  @keyframes float-dots-reverse {
+    0%, 100% {
+      transform: translateX(0) translateY(0);
+      opacity: 0.8;
+    }
+    25% {
+      transform: translateX(-12px) translateY(8px);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(8px) translateY(-10px);
+      opacity: 0.9;
+    }
+    75% {
+      transform: translateX(-6px) translateY(-5px);
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes pulse-dots {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes drift-dots {
+    0%, 100% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    33% {
+      transform: translateX(20px) translateY(-10px) rotate(5deg);
+    }
+    66% {
+      transform: translateX(-15px) translateY(15px) rotate(-3deg);
+    }
+  }
+
+  @keyframes gentle-float {
+    0%, 100% {
+      transform: translateY(0);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translateY(-8px);
+      opacity: 1;
+    }
   }
 
   /* Animation utilities inspired by Lucis.life */
