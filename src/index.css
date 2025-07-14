@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -112,7 +113,7 @@ All colors MUST be HSL.
     background-size: 20px 20px;
   }
 
-  /* Simplified dynamic dots - only large dots */
+  /* Simplified dynamic dots - only large dots with reduced opacity */
   .bg-dots-dynamic {
     position: relative;
     overflow: hidden;
@@ -127,15 +128,15 @@ All colors MUST be HSL.
     bottom: 0;
     pointer-events: none;
     background-image: 
-      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.5) 2px, transparent 2px),
-      radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.5) 2px, transparent 2px),
-      radial-gradient(circle at 50% 50%, hsl(var(--accent) / 0.5) 2px, transparent 2px);
-    background-size: 80px 80px, 70px 70px, 60px 60px;
+      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.15) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.15) 2px, transparent 2px),
+      radial-gradient(circle at 50% 50%, hsl(var(--accent) / 0.15) 2px, transparent 2px);
+    background-size: 100px 100px, 90px 90px, 80px 80px;
     background-position: 0 0, 20px 20px, 40px 40px;
-    animation: float-dots 20s ease-in-out infinite;
+    animation: float-dots 30s ease-in-out infinite;
   }
 
-  /* Hero section dots - only large dots */
+  /* Hero section dots - only large dots with reduced opacity */
   .bg-dots-hero {
     position: relative;
     overflow: hidden;
@@ -150,15 +151,15 @@ All colors MUST be HSL.
     bottom: 0;
     pointer-events: none;
     background-image: 
-      radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.5) 2px, transparent 2px),
-      radial-gradient(circle at 80% 60%, hsl(var(--secondary) / 0.5) 2px, transparent 2px),
-      radial-gradient(circle at 45% 80%, hsl(var(--accent) / 0.5) 2px, transparent 2px);
-    background-size: 80px 80px, 70px 70px, 60px 60px;
+      radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.15) 2px, transparent 2px),
+      radial-gradient(circle at 80% 60%, hsl(var(--secondary) / 0.15) 2px, transparent 2px),
+      radial-gradient(circle at 45% 80%, hsl(var(--accent) / 0.15) 2px, transparent 2px);
+    background-size: 100px 100px, 90px 90px, 80px 80px;
     background-position: 0 0, 25px 25px, 50px 50px;
-    animation: pulse-dots 15s ease-in-out infinite;
+    animation: pulse-dots 25s ease-in-out infinite;
   }
 
-  /* Subtle animated dots - consistent with others */
+  /* Subtle animated dots - consistent with others with reduced opacity */
   .bg-dots-subtle-animated {
     position: relative;
     overflow: hidden;
@@ -173,29 +174,29 @@ All colors MUST be HSL.
     bottom: 0;
     pointer-events: none;
     background-image: 
-      radial-gradient(circle at 30% 40%, hsl(var(--primary) / 0.5) 2px, transparent 2px),
-      radial-gradient(circle at 70% 70%, hsl(var(--muted-foreground) / 0.5) 2px, transparent 2px);
-    background-size: 80px 80px, 70px 70px;
+      radial-gradient(circle at 30% 40%, hsl(var(--primary) / 0.15) 2px, transparent 2px),
+      radial-gradient(circle at 70% 70%, hsl(var(--muted-foreground) / 0.15) 2px, transparent 2px);
+    background-size: 100px 100px, 90px 90px;
     background-position: 0 0, 25px 25px;
-    animation: gentle-float 22s ease-in-out infinite;
+    animation: gentle-float 35s ease-in-out infinite;
   }
 
-  /* Animation keyframes */
+  /* Animation keyframes - slowed down and more subtle */
   @keyframes float-dots {
     0%, 100% {
       transform: translateX(0) translateY(0);
       opacity: 1;
     }
     25% {
-      transform: translateX(8px) translateY(-4px);
+      transform: translateX(4px) translateY(-2px);
       opacity: 0.8;
     }
     50% {
-      transform: translateX(-4px) translateY(8px);
+      transform: translateX(-2px) translateY(4px);
       opacity: 1;
     }
     75% {
-      transform: translateX(12px) translateY(4px);
+      transform: translateX(6px) translateY(2px);
       opacity: 0.9;
     }
   }
@@ -206,7 +207,7 @@ All colors MUST be HSL.
       opacity: 1;
     }
     50% {
-      transform: scale(1.05);
+      transform: scale(1.02);
       opacity: 0.8;
     }
   }
@@ -217,7 +218,7 @@ All colors MUST be HSL.
       opacity: 0.8;
     }
     50% {
-      transform: translateY(-6px);
+      transform: translateY(-3px);
       opacity: 1;
     }
   }
