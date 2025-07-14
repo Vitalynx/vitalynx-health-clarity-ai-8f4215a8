@@ -127,9 +127,9 @@ All colors MUST be HSL.
     bottom: 0;
     pointer-events: none;
     background-image: 
-      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.4) 3px, transparent 3px),
-      radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.35) 3px, transparent 3px),
-      radial-gradient(circle at 50% 50%, hsl(var(--accent) / 0.3) 3px, transparent 3px);
+      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.5) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.5) 2px, transparent 2px),
+      radial-gradient(circle at 50% 50%, hsl(var(--accent) / 0.5) 2px, transparent 2px);
     background-size: 80px 80px, 70px 70px, 60px 60px;
     background-position: 0 0, 20px 20px, 40px 40px;
     animation: float-dots 20s ease-in-out infinite;
@@ -150,9 +150,9 @@ All colors MUST be HSL.
     bottom: 0;
     pointer-events: none;
     background-image: 
-      radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.4) 3px, transparent 3px),
-      radial-gradient(circle at 80% 60%, hsl(var(--secondary) / 0.35) 3px, transparent 3px),
-      radial-gradient(circle at 45% 80%, hsl(var(--accent) / 0.3) 3px, transparent 3px);
+      radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.5) 2px, transparent 2px),
+      radial-gradient(circle at 80% 60%, hsl(var(--secondary) / 0.5) 2px, transparent 2px),
+      radial-gradient(circle at 45% 80%, hsl(var(--accent) / 0.5) 2px, transparent 2px);
     background-size: 80px 80px, 70px 70px, 60px 60px;
     background-position: 0 0, 25px 25px, 50px 50px;
     animation: pulse-dots 15s ease-in-out infinite;
@@ -173,8 +173,8 @@ All colors MUST be HSL.
     bottom: 0;
     pointer-events: none;
     background-image: 
-      radial-gradient(circle at 30% 40%, hsl(var(--primary) / 0.4) 3px, transparent 3px),
-      radial-gradient(circle at 70% 70%, hsl(var(--muted-foreground) / 0.35) 3px, transparent 3px);
+      radial-gradient(circle at 30% 40%, hsl(var(--primary) / 0.5) 2px, transparent 2px),
+      radial-gradient(circle at 70% 70%, hsl(var(--muted-foreground) / 0.5) 2px, transparent 2px);
     background-size: 80px 80px, 70px 70px;
     background-position: 0 0, 25px 25px;
     animation: gentle-float 22s ease-in-out infinite;
