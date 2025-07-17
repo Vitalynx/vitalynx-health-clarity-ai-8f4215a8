@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
+import { useToast } from "@/hooks/use-toast";
 import { 
   Upload, 
   MessageSquare, 
@@ -30,12 +31,24 @@ import heroImage from "@/assets/hero-health-ai.jpg";
 const Index = () => {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const { toast } = useToast();
 
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
       setIsSubmitted(true);
+      toast({
+        title: "Welcome to the waitlist!",
+        description: "We'll notify you when Vitalynx is ready for launch.",
+      });
       console.log("Signup email:", email);
+    }
+  };
+
+  const scrollToSignup = () => {
+    const signupSection = document.getElementById('signup-section');
+    if (signupSection) {
+      signupSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -63,7 +76,12 @@ const Index = () => {
               <a href="#how" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 font-light">How it works</a>
               <a href="#about" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 font-light">About</a>
               <a href="#faq" className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 font-light">FAQ</a>
-              <Button variant="outline" size="sm" className="border-primary/30 hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-light">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                onClick={scrollToSignup}
+                className="border-primary/30 hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-light"
+              >
                 Early Access
               </Button>
             </div>
@@ -95,7 +113,11 @@ const Index = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-base px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] transition-all duration-300 font-light shadow-lg">
+                <Button 
+                  size="lg" 
+                  onClick={scrollToSignup}
+                  className="text-base px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] transition-all duration-300 font-light shadow-lg"
+                >
                   Get Early Access
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -278,7 +300,7 @@ const Index = () => {
       </section>
 
       {/* Early Access */}
-      <section className="py-20 relative bg-dots-dynamic">
+      <section id="signup-section" className="py-20 relative bg-dots-dynamic">
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/30 to-background/40"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 backdrop-blur-sm">
