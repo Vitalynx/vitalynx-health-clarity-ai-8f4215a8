@@ -28,7 +28,7 @@ import {
   TrendingUp,
   Activity,
   Linkedin,
-  Twitter,
+  Youtube,
   Instagram,
   ArrowDown,
   Moon,
@@ -459,20 +459,20 @@ const Index = () => {
               </ul>
             </div>
             
-            <div className="space-y-4">
-              <h4 className="font-light text-foreground">Connect</h4>
-              <div className="flex gap-3">
-                {[
-                  { Icon: Linkedin, color: "hover:text-blue-500 hover:border-blue-500/30" },
-                  { Icon: Twitter, color: "hover:text-blue-400 hover:border-blue-400/30" },
-                  { Icon: Instagram, color: "hover:text-pink-500 hover:border-pink-500/30" }
-                ].map(({ Icon, color }, index) => (
-                  <a key={index} href="#" className={`w-10 h-10 border border-primary/20 rounded-xl flex items-center justify-center ${color} hover:bg-primary/5 transition-all duration-300 group`}>
-                    <Icon className="w-4 h-4 text-muted-foreground group-hover:scale-110 transition-transform duration-300" />
-                  </a>
-                ))}
+              <div className="space-y-4">
+                <h4 className="font-light text-foreground">Connect</h4>
+                <div className="flex gap-3">
+                  {[
+                    { Icon: Linkedin, color: "hover:text-blue-500 hover:border-blue-500/30", href: "https://www.linkedin.com/in/vitalynx/" },
+                    { Icon: Youtube, color: "hover:text-red-500 hover:border-red-500/30", href: "#" },
+                    { Icon: Instagram, color: "hover:text-pink-500 hover:border-pink-500/30", href: "https://www.instagram.com/vitalynxlabs/" }
+                  ].map(({ Icon, color, href }, index) => (
+                    <a key={index} href={href} target="_blank" rel="noopener noreferrer" className={`w-10 h-10 border border-primary/20 rounded-xl flex items-center justify-center ${color} hover:bg-primary/5 transition-all duration-300 group`}>
+                      <Icon className="w-4 h-4 text-muted-foreground group-hover:scale-110 transition-transform duration-300" />
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
           </div>
           
           <div className="pt-6 border-t border-primary/10 text-center">
