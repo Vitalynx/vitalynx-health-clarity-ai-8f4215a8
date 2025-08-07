@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
+import { StickyCtaButton } from "@/components/StickyCtaButton";
+import { SocialProof } from "@/components/SocialProof";
+import { TestimonialCards } from "@/components/TestimonialCards";
+import { WaitlistCounter } from "@/components/WaitlistCounter";
+import { DemoGifPlaceholder } from "@/components/DemoGifPlaceholder";
 import { 
   Upload, 
   MessageSquare, 
@@ -24,7 +29,12 @@ import {
   Activity,
   Linkedin,
   Twitter,
-  Instagram
+  Instagram,
+  ArrowDown,
+  Moon,
+  Sun,
+  Play,
+  Sparkles
 } from "lucide-react";
 import heroImage from "@/assets/hero-health-ai.jpg";
 
@@ -54,6 +64,8 @@ const Index = () => {
 
   return (
     <div className="antialiased bg-background text-foreground overflow-x-hidden">
+      {/* Sticky CTA Button */}
+      <StickyCtaButton onClick={scrollToSignup} />
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-primary/10">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -134,43 +146,52 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="relative">
-              <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] group">
-                <img 
-                  src={heroImage} 
-                  alt="Vitalynx mobile app interface" 
-                  className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6 text-white space-y-4">
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-light mb-2">Smart Health Analysis Dashboard</h3>
-                    <p className="text-sm opacity-90 font-light leading-relaxed">
-                      Transform complex lab results into clear, personalized health insights instantly. Get comprehensive analysis of your biomarkers, trends, and actionable recommendations.
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-4 text-xs opacity-80">
-                    <div className="flex items-center gap-1">
-                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                      <span>Real-time Analysis</span>
+            <div className="space-y-6">
+              {/* Demo GIF Placeholder */}
+              <DemoGifPlaceholder />
+              
+              {/* Reduced size mobile mockup */}
+              <div className="relative scale-75 origin-center">
+                <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] group">
+                  <img 
+                    src={heroImage} 
+                    alt="Vitalynx mobile app interface" 
+                    className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white space-y-2">
+                    <div className="space-y-1">
+                      <h3 className="text-lg font-light">Health Dashboard</h3>
+                      <p className="text-xs opacity-90 font-light leading-relaxed">
+                        Real-time biomarker analysis and personalized recommendations.
+                      </p>
                     </div>
-                    <div className="flex items-center gap-1">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                      <span>HIPAA Compliant</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                      <span>AI-Powered</span>
+                    <div className="flex items-center gap-3 text-xs opacity-80">
+                      <div className="flex items-center gap-1">
+                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                        <span>Secure</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                        <span>HIPAA</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                        <span>AI-Powered</span>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div className="absolute -top-2 -right-2 w-12 h-12 bg-primary/10 rounded-full blur-xl"></div>
+                <div className="absolute -bottom-3 -left-3 w-16 h-16 bg-secondary/10 rounded-full blur-xl"></div>
               </div>
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/10 rounded-full blur-2xl"></div>
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-secondary/10 rounded-full blur-2xl"></div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Social Proof */}
+      <SocialProof />
 
       {/* Stats Section */}
       <section className="py-12 border-y border-primary/10 relative bg-dots-subtle-animated">
@@ -194,13 +215,26 @@ const Index = () => {
             ))}
           </div>
         </div>
+        
+        {/* CTA after stats */}
+        <div className="text-center mt-12">
+          <Button 
+            onClick={scrollToSignup}
+            variant="outline"
+            size="lg"
+            className="bg-background/50 backdrop-blur-sm border-primary/30 hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-light"
+          >
+            Get Early Access
+            <ArrowDown className="w-4 h-4 ml-2" />
+          </Button>
+        </div>
       </section>
 
       {/* How It Works */}
       <section id="how" className="py-16 relative bg-dots-dynamic">
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/30 to-background/40"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <div className="inline-block px-4 py-2 rounded-full bg-primary/5 text-sm text-primary font-light mb-6 border border-primary/10">
               Simple Process
             </div>
@@ -208,54 +242,76 @@ const Index = () => {
               How It Works
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
-              Four simple steps to understanding your health
+              Three simple steps to unlock your health insights
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Upload,
-                title: "Upload Report", 
-                description: "Upload lab reports as PDF/image or enter results manually",
-                gradient: "from-primary/20 to-primary/30",
-                iconColor: "text-primary"
-              },
-              {
-                icon: MessageSquare,
-                title: "Add Context",
-                description: "Share symptoms or health concerns for better insights",
-                gradient: "from-secondary/20 to-secondary/30", 
-                iconColor: "text-secondary"
-              },
-              {
-                icon: Brain,
-                title: "AI Analysis",
-                description: "Our AI analyzes your data and provides instant insights",
-                gradient: "from-accent/20 to-accent/30",
-                iconColor: "text-accent"
-              },
-              {
-                icon: FileText,
-                title: "Get Summary",
-                description: "Receive personalized health summary with recommendations",
-                gradient: "from-primary/20 to-primary/30",
-                iconColor: "text-primary"
-              }
-            ].map((step, index) => (
-              <div key={index} className="group text-center relative">
-                <div className={`mx-auto w-14 h-14 bg-gradient-to-br ${step.gradient} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border border-primary/10`}>
-                  <step.icon className={`w-6 h-6 ${step.iconColor}`} />
+          {/* Enhanced 3-step process */}
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-12 relative">
+              {/* Connection lines for desktop */}
+              <div className="hidden md:block absolute top-16 left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-primary/30 via-secondary/30 to-accent/30"></div>
+              
+              {[
+                {
+                  icon: Upload,
+                  title: "Upload Your Lab Report", 
+                  description: "Upload lab reports as PDF/image or enter test results manually. Our AI instantly recognizes and extracts your biomarker data.",
+                  gradient: "from-primary/20 to-primary/30",
+                  iconColor: "text-primary",
+                  step: "01"
+                },
+                {
+                  icon: Brain,
+                  title: "AI Decodes Your Data",
+                  description: "Our advanced AI analyzes your health data, comparing it to medical standards and identifying patterns and trends.",
+                  gradient: "from-secondary/20 to-secondary/30", 
+                  iconColor: "text-secondary",
+                  step: "02"
+                },
+                {
+                  icon: Sparkles,
+                  title: "Get Personalized Insights",
+                  description: "Receive clear explanations, health insights, and lifestyle recommendations tailored specifically to your results.",
+                  gradient: "from-accent/20 to-accent/30",
+                  iconColor: "text-accent",
+                  step: "03"
+                }
+              ].map((step, index) => (
+                <div key={index} className="group text-center relative z-10">
+                  <div className="relative mb-8">
+                    <div className={`mx-auto w-20 h-20 bg-gradient-to-br ${step.gradient} rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border border-primary/10 shadow-soft`}>
+                      <step.icon className={`w-8 h-8 ${step.iconColor}`} />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-xs font-medium shadow-glow">
+                      {step.step}
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-light mb-4 text-foreground">{step.title}</h3>
+                  <p className="text-muted-foreground font-light leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
-                <h3 className="text-lg font-light mb-3 text-foreground">{step.title}</h3>
-                <p className="text-muted-foreground font-light leading-relaxed text-sm">
-                  {step.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+          
+          {/* CTA after How It Works */}
+          <div className="text-center mt-16">
+            <Button 
+              onClick={scrollToSignup}
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 font-light shadow-glow px-8 py-6 text-base"
+            >
+              Start Your Health Journey
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </div>
         </div>
       </section>
+      
+      {/* Testimonials */}
+      <TestimonialCards />
 
       {/* FAQ */}
       <section id="faq" className="py-20 relative bg-dots-subtle-animated">
@@ -296,6 +352,19 @@ const Index = () => {
               </AccordionItem>
             ))}
           </Accordion>
+          
+          {/* CTA after FAQ */}
+          <div className="text-center mt-16">
+            <Button 
+              onClick={scrollToSignup}
+              variant="outline"
+              size="lg"
+              className="bg-background/50 backdrop-blur-sm border-primary/30 hover:border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-light"
+            >
+              Still have questions? Join the waitlist
+              <ArrowDown className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -315,24 +384,28 @@ const Index = () => {
           </p>
           
           {!isSubmitted ? (
-            <form onSubmit={handleSignup} className="space-y-8">
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="flex-1 h-12 bg-background/50 border-primary/20 font-light text-base backdrop-blur-sm focus:border-primary transition-colors duration-300"
-                />
-                <Button type="submit" size="lg" className="h-12 px-8 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 font-light shadow-lg">
-                  Join Waitlist
-                </Button>
-              </div>
-              <p className="text-sm text-muted-foreground font-light">
-                No spam. Launch notifications only.
-              </p>
-            </form>
+            <div className="space-y-8">
+              <form onSubmit={handleSignup} className="space-y-6">
+                <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                  <Input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="flex-1 h-12 bg-background/50 border-primary/20 font-light text-base backdrop-blur-sm focus:border-primary transition-colors duration-300"
+                  />
+                  <Button type="submit" size="lg" className="h-12 px-8 bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 font-light shadow-glow">
+                    Join Waitlist
+                    <Sparkles className="w-4 h-4 ml-2" />
+                  </Button>
+                </div>
+                <p className="text-sm text-muted-foreground font-light">
+                  We'll only email you at launch. No spam. Ever.
+                </p>
+              </form>
+              <WaitlistCounter />
+            </div>
           ) : (
             <Card className="max-w-md mx-auto border-0 shadow-xl bg-card/50 backdrop-blur-sm">
               <CardContent className="p-8 text-center">
