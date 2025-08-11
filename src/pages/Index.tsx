@@ -150,48 +150,11 @@ const Index = () => {
               {/* Demo GIF Placeholder */}
               <DemoGifPlaceholder />
               
-              {/* Reduced size mobile mockup */}
-              <div className="relative scale-75 origin-center">
-                <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] group">
-                  <img 
-                    src={heroImage} 
-                    alt="Vitalynx mobile app interface" 
-                    className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                  />
-                  
-                  <div className="absolute bottom-4 left-4 right-4 text-white space-y-2">
-                    <div className="space-y-1">
-                      <h3 className="text-lg font-light">Health Dashboard</h3>
-                      <p className="text-xs opacity-90 font-light leading-relaxed">
-                        Real-time biomarker analysis and personalized recommendations.
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-3 text-xs opacity-80">
-                      <div className="flex items-center gap-1">
-                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                        <span>Secure</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                        <span>HIPAA</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                        <span>AI-Powered</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute -top-2 -right-2 w-12 h-12 bg-primary/10 rounded-full blur-xl"></div>
-                <div className="absolute -bottom-3 -left-3 w-16 h-16 bg-secondary/10 rounded-full blur-xl"></div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Social Proof */}
-      <SocialProof />
 
       {/* Stats Section */}
       <section className="py-12 border-y border-primary/10 relative bg-dots-subtle-animated">
