@@ -19,12 +19,12 @@ export const WaitlistCounter = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mt-6 bg-primary/5 rounded-full px-4 py-2 border border-primary/10">
+    <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mt-6 bg-blue-500/5 rounded-full px-4 py-2 border border-blue-500/10">
       <Users className="w-4 h-4 text-primary" />
       <span className="font-light">
         🎉{" "}
         <span 
-          className={`font-medium text-primary ${isAnimating ? 'animate-pulse' : ''}`}
+          className={`font-medium text-primary blur-sm ${isAnimating ? 'animate-pulse' : ''}`}
         >
           {count.toLocaleString()}
         </span>{" "}
