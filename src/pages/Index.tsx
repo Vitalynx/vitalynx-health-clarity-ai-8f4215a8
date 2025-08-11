@@ -158,7 +158,7 @@ const Index = () => {
                     alt="Vitalynx mobile app interface" 
                     className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                  
                   <div className="absolute bottom-4 left-4 right-4 text-white space-y-2">
                     <div className="space-y-1">
                       <h3 className="text-lg font-light">Health Dashboard</h3>
