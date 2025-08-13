@@ -80,7 +80,7 @@ const Index = () => {
                 <div className="absolute inset-0 bg-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-styrene tracking-tight text-foreground">Vitalynx</span>
+                <span className="text-xl font-cartoony tracking-tight text-foreground">Vitalynx</span>
                 <span className="text-[9px] text-primary/60 tracking-[0.3em] uppercase font-medium -mt-1">Health AI</span>
               </div>
             </div>
@@ -112,9 +112,9 @@ const Index = () => {
                   <Activity className="w-4 h-4 text-primary" />
                   <span className="text-sm text-primary font-light">AI-Powered Health Insights</span>
                 </div>
-                <h1 className="text-5xl md:text-6xl font-styrene text-foreground leading-tight">
+                <h1 className="text-5xl md:text-6xl font-cartoony text-foreground leading-tight">
                   Decode Your{" "}
-                  <span className="font-styrene bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+                  <span className="font-cartoony bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
                     Health
                   </span>
                   <br />Instantly
@@ -201,7 +201,7 @@ const Index = () => {
             <div className="inline-block px-4 py-2 rounded-full bg-primary/5 text-sm text-primary font-light mb-6 border border-primary/10">
               Simple Process
             </div>
-            <h2 className="text-4xl md:text-5xl font-styrene text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-cartoony text-foreground mb-4">
               How It Works
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
@@ -281,7 +281,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-background/30"></div>
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-styrene text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl font-cartoony text-foreground mb-6">
               FAQ
             </h2>
           </div>
@@ -339,7 +339,7 @@ const Index = () => {
             <Star className="w-4 h-4 text-primary" />
             <span className="text-sm text-primary font-light">Early Access</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-styrene text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-cartoony text-foreground mb-6">
             Get Early Access
           </h2>
           <p className="text-lg text-muted-foreground mb-12 font-light leading-relaxed">
@@ -396,7 +396,7 @@ const Index = () => {
                   className="w-7 h-7"
                 />
                 <div className="flex flex-col">
-                  <span className="text-lg font-styrene">Vitalynx</span>
+                  <span className="text-lg font-cartoony">Vitalynx</span>
                   <span className="text-[9px] text-primary/60 tracking-[0.3em] uppercase font-light -mt-1">Health AI</span>
                 </div>
               </div>

@@ -101,7 +101,7 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			},
 			fontFamily: {
-				'styrene': ['Tenor Sans', 'sans-serif'],
+				'cartoony': ['Comfortaa', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
 			}
 		}
