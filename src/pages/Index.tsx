@@ -246,9 +246,6 @@ const Index = () => {
                     <div className={`mx-auto w-20 h-20 bg-gradient-to-br ${step.gradient} rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 border border-primary/10 shadow-soft`}>
                       <step.icon className={`w-8 h-8 ${step.iconColor}`} />
                     </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-xs font-medium shadow-glow">
-                      {step.step}
-                    </div>
                   </div>
                   <h3 className="text-xl font-light mb-4 text-foreground">{step.title}</h3>
                   <p className="text-muted-foreground font-light leading-relaxed">
@@ -272,6 +269,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      {/* Trusted By Section */}
+      <SocialProof />
       
       {/* Testimonials */}
       <TestimonialCards />
