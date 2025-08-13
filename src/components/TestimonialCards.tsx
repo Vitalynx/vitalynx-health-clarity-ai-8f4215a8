@@ -25,7 +25,7 @@ export const TestimonialCards = () => {
           <div className="inline-block px-4 py-2 rounded-full bg-primary/5 text-sm text-primary font-light mb-6 border border-primary/10">
             What Our Users Say
           </div>
-          <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-styrene text-foreground mb-4">
             Trusted by Healthcare Enthusiasts
           </h2>
         </div>
