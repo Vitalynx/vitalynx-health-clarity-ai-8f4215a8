@@ -52,7 +52,7 @@ export const TestimonialCards = () => {
                         </span>
                       </div>
                       <div>
-                        <p className="font-medium text-foreground">{testimonial.author}</p>
+                        <p className="font-medium text-foreground blur-sm">{testimonial.author}</p>
                         <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                       </div>
                     </div>
